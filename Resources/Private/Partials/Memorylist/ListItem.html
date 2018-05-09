@@ -1,0 +1,30 @@
+{namespace hwt=Hwt\HwtMemorylist\ViewHelpers}
+
+
+<f:if condition="{hwt:variable.getType(value: '{record}')} == 'stdClass'">
+    (stdClass)
+</f:if>
+
+
+<f:switch expression="{hwt:variable.getType(value: '{record}')}">
+    <f:case value="stdClass">
+        (Page) UID {record.uid}: <b>{record.title}</b> <br />
+        Class Name: <hwt:variable.getType value="{record}" />
+        <a href="#" class="hwtmemorylist-ctrl" data-hwtmemorylist-model="Page" data-hwtmemorylist-recordid="{record.uid}" data-hwtmemorylist-action="remove">REMOVE</a>
+    </f:case>
+    <f:case value="GeorgRinger\News\Domain\Model\NewsDefault">
+        (News)UID {record.uid}: <b>{record.title}</b> <br />
+        Class Name: <hwt:variable.getType value="{record}" />
+        <a href="#" class="hwtmemorylist-ctrl" data-hwtmemorylist-model="TxNewsNews" data-hwtmemorylist-recordid="{record.uid}" data-hwtmemorylist-action="remove">REMOVE</a>
+    </f:case>
+    <f:case value="Hwt\HwtAddress\Domain\Model\Address">
+        (HwtAddress) UID {record.uid}: <b>{record.firstname} {record.lastname}</b> <br />
+        Class Name: <hwt:variable.getType value="{record}" />
+        <a href="#" class="hwtmemorylist-ctrl" data-hwtmemorylist-model="TxHwtAddressAddress" data-hwtmemorylist-recordid="{record.uid}" data-hwtmemorylist-action="remove">REMOVE</a>
+    </f:case>
+
+    <f:defaultCase>
+        (unknown) UID {record.uid}: <b>{record.title}</b> <br />
+        Class Name: <hwt:variable.getType value="{record}" />
+    </f:defaultCase>
+</f:switch>

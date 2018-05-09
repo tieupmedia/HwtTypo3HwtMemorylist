@@ -1,0 +1,129 @@
+plugin.tx_hwtmemorylist {
+    view {
+        templateRootPaths.0 = {$plugin.tx_hwtmemorylist.view.templateRootPaths.0}
+        partialRootPaths.0 = {$plugin.tx_hwtmemorylist.view.partialRootPaths.0}
+        layoutRootPaths.0 = {$plugin.tx_hwtmemorylist.view.layoutRootPaths.0}
+    }
+
+    settings {
+        ajax {
+            typeNum = {$plugin.tx_hwtmemorylist.settings.ajax.typeNum}
+            pid = {$plugin.tx_hwtmemorylist.settings.ajax.pid}
+        }
+
+        list {
+            recordtypes {
+                # stdClass
+                Page {
+                    repository = Hwt\HwtMemorylist\Domain\Repository\PageRepository
+                }
+
+                # Models
+                TxNewsNews {
+                    repository = GeorgRinger\News\Domain\Repository\NewsRepository
+                }
+                TxHwtAddressAddress {
+                    repository = Hwt\HwtAddress\Domain\Repository\AddressRepository
+                }
+            }
+        }
+
+        #add {}
+        #remove {}
+
+        enableDemoTemplates = {$plugin.tx_hwtmemorylist.settings.enableDemoTemplates}
+    }
+}
+
+
+
+#
+# ajax handling
+#
+
+# global js vars
+lib.tx_hwtmemorylist_memorylist_globaljsvars = COA
+lib.tx_hwtmemorylist_memorylist_globaljsvars {
+    10 = TEXT
+    10 {
+        wrap = var hwtmemorylistMemorylistAjaxUrl = '|';
+        typolink {
+            parameter = {$plugin.tx_hwtmemorylist.settings.ajax.pid}
+            returnLast = url
+        }
+    }
+
+    stdWrap.dataWrap (
+        var hwtmemorylistMemorylistAjaxPageType = {$plugin.tx_hwtmemorylist.settings.ajax.typeNum};
+        |
+    )
+    stdWrap.wrap3 (
+        <script type="text/javascript">
+            |
+        </script>
+    )
+    insertData = 1
+}
+
+page.jsInline {
+    121212 < lib.tx_hwtmemorylist_memorylist_globaljsvars
+    121212.stdWrap.wrap3 >
+}
+
+
+# ajax page object
+tx_hwtmemorylist_memorylist_ajax = PAGE
+tx_hwtmemorylist_memorylist_ajax {
+    typeNum < plugin.tx_hwtmemorylist.settings.ajax.typeNum
+    config {
+        disableAllHeaderCode = 1
+        xhtml_cleaning = 0
+        admPanel = 0
+        no_cache = 1
+        debug = 0
+    }
+
+    #5 < tt_content.list.20.hwtmemorylist_memorylist
+
+    10 = USER
+    10 {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        extensionName = HwtMemorylist
+        pluginName = Memorylist
+        vendorName = Hwt
+        controller = Memorylist
+        action = list
+        switchableControllerActions {
+            Memorylist {
+                1 = list
+                2 = add
+                3 = remove
+                4 = clear
+            }
+        }
+        view < plugin.tx_hwtmemorylist.view
+        persistence < plugin.tx_hwtmemorylist.persistence
+        settings < plugin.tx_hwtmemorylist.settings
+    }
+}
+
+
+
+x_tx_hwtmemorylist_memorylist_ajaxHtml < hwtmemorylist_memorylist_ajax
+x_tx_hwtmemorylist_memorylist_ajaxHtml {
+    typeNum = 121213
+    config {
+        additionalHeaders {
+            20.header = Content-type:text/html
+        }
+    }
+
+    10 {
+        switchableControllerActions {
+            Memorylist {
+                2 >
+                3 >
+            }
+        }
+    }
+}

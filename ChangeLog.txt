@@ -1,0 +1,18 @@
+2018-05-09 Heiko Westermann <hwt3@gmx.de>
+    * Version 0.0.4-beta - First public release
+    * [FEATURE] Configurable list types (models) and repositories
+    * [TASK] Optimised ajax handling
+
+2017-11-04 Heiko Westermann <hwt3@gmx.de>
+    * Version 0.0.3-beta - Feature release
+    * [FEATURE] Configurable list types (models) and repositories
+    * [TASK] Code cleanup
+
+2016-02-17 Heiko Westermann <hwt3@gmx.de>
+    * Version 0.0.2-alpha
+    * [FEATURE] Restructured templates
+
+2016-01-24 Heiko Westermann <hwt3@gmx.de>
+    * Version 0.0.1-alpha
+    * Initial setup: This is an early version of the extension in development.
+      Some major functions and features are missing!

@@ -1,0 +1,20 @@
+plugin.tx_hwtmemorylist {
+    view {
+        # cat=plugin.tx_hwtmemorylist/file; type=string; label=Path to template root (FE)
+        templateRootPaths.0 = EXT:hwt_memorylist/Resources/Private/Templates/
+		 # cat=plugin.tx_hwtmemorylist/file; type=string; label=Path to template partials (FE)
+        partialRootPaths.0 = EXT:hwt_memorylist/Resources/Private/Partials/
+		 # cat=plugin.tx_hwtmemorylist/file; type=string; label=Path to template layouts (FE)
+        layoutRootPaths.0 = EXT:hwt_memorylist/Resources/Private/Layouts/
+    }
+
+    settings {
+        ajax {
+            typeNum = 121212
+            pid = 1
+        }
+
+		 # cat=plugin.tx_hwtmemorylist/file; type=string; label=Enable demo Templates (FE)
+        enableDemoTemplates = 1
+    }
+}

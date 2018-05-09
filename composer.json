@@ -1,0 +1,45 @@
+{
+  "name": "tieupmedia/hwt_memorylist",
+  "type": "typo3-cms-extension",
+  "version": "0.0.4",
+  "description": "This TYPO3 extension provides a flexible memory list for TYPO3 >= 7.6",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
+    }
+  ],
+  "keywords": [
+    "TYPO3 CMS",
+    "Extbase",
+    "Fluid",
+    "Flexible Memorylist",
+    "universal"
+  ],
+  "authors": [
+    {
+      "name": "tie-up media",
+      "email": "hwt3@gmx.de",
+      "role": "Developer",
+      "homepage": "https://github.com/tieupmedia/"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "typo3/cms-core": "~7.6.0||~8.7.0"
+  },
+  "replace": {
+    "hwt_memorylist": "self.version",
+    "typo3-ter/hwt_memorylist": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hwt\\HwtMemorylist\\": "Classes"
+    }
+  },
+  "homepage": "https://github.com/tieupmedia/",
+  "license": "GPL-2.0-or-later",
+  "support": {
+    "issues": "https://github.com/tieupmedia/HwtTypo3HwtMemorylist/issues/"
+  }
+}

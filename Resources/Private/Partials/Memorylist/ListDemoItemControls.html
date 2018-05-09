@@ -1,0 +1,32 @@
+<div class="hwtmemorylist-itemcontrols">
+    <hr />
+    <h3>Demo-Controls</h3>
+    <p>Example of item controls:<br />
+        - Replace in production with buttons at your specific items<br />
+        - Disable via typoscript constant 'plugin.tx_hwtmemorylist.settings.enableDemoTemplates = 0'<br />
+    </p>
+
+
+    <p>
+        <b>Pages</b><br />
+        UID 1
+        <a href="#" class="hwtmemorylist-ctrl" data-hwtmemorylist-model="Page" data-hwtmemorylist-recordid="1" data-hwtmemorylist-action="add"><f:translate key="plugin_memorylist.ctrl.add" default="add" /></a>
+        <a href="#" class="hwtmemorylist-ctrl" data-hwtmemorylist-model="Page" data-hwtmemorylist-recordid="1" data-hwtmemorylist-action="remove"><f:translate key="plugin_memorylist.ctrl.remove" default="remove" /></a>
+
+
+        <br /><br />
+
+        <b>News</b> (Only works, if tx_news is installed)<br />
+        UID 7
+        <a href="#" class="hwtmemorylist-ctrl" data-hwtmemorylist-model="TxNewsNews" data-hwtmemorylist-recordid="7" data-hwtmemorylist-action="add"><f:translate key="plugin_memorylist.ctrl.add" default="add" /></a>
+        <a href="#" class="hwtmemorylist-ctrl" data-hwtmemorylist-model="TxNewsNews" data-hwtmemorylist-recordid="7" data-hwtmemorylist-action="remove"><f:translate key="plugin_memorylist.ctrl.remove" default="remove" /></a>
+
+
+        <br /><br />
+
+        <b>HwtAddress</b> (Only works, if hwt_address is installed)<br />
+        UID 51
+        <a href="#" class="hwtmemorylist-ctrl" data-hwtmemorylist-model="TxHwtAddressAddress" data-hwtmemorylist-recordid="51" data-hwtmemorylist-action="add"><f:translate key="plugin_memorylist.ctrl.add" default="add" /></a>
+        <a href="#" class="hwtmemorylist-ctrl" data-hwtmemorylist-model="TxHwtAddressAddress" data-hwtmemorylist-recordid="51" data-hwtmemorylist-action="remove"><f:translate key="plugin_memorylist.ctrl.remove" default="remove" /></a>
+    </p>
+</div>

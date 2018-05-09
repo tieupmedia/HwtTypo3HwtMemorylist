@@ -1,0 +1,40 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+
+    <sheets>
+        <!--
+            ################################
+              SHEET General Settings
+            ################################
+        -->
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:hwt_memorylist/Resources/Private/Language/locallang_be.xlf:flexform_tab.settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <!-- View -->
+                    <switchableControllerActions>
+                        <TCEforms>
+                            <label>LLL:EXT:hwt_memorylist/Resources/Private/Language/locallang_be.xlf:flexform_setting.mode</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:hwt_memorylist/Resources/Private/Language/locallang_be.xlf:flexform_setting.mode.memorylist_list</numIndex>
+                                        <numIndex index="1">Memorylist->list</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </switchableControllerActions>
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

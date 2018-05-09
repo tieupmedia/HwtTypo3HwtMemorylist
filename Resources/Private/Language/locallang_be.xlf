@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file source-language="en" datatype="plaintext" product-name="hwt_memorylist">
+		<header/>
+		<body>
+			<trans-unit id="plugin_memorylist">
+				<source>Flexible Memorylist Plugin</source>
+			</trans-unit>
+
+			<trans-unit id="flexform_tab.settings" xml:space="preserve">
+				<source>Settings</source>
+			</trans-unit>
+			<trans-unit id="flexform_setting.mode" xml:space="preserve">
+				<source>Modus</source>
+			</trans-unit>
+			<trans-unit id="flexform_setting.mode.memorylist_list" xml:space="preserve">
+				<source>Memorylist List</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
