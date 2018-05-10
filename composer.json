@@ -1,7 +1,7 @@
 {
   "name": "tieupmedia/hwt_memorylist",
   "type": "typo3-cms-extension",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "This TYPO3 extension provides a flexible memory list for TYPO3 >= 7.6",
   "repositories": [
     {
@@ -26,7 +26,7 @@
   ],
   "require": {
     "php": ">=7.0.0",
-    "typo3/cms-core": "~7.6.0||~8.7.0"
+    "typo3/cms-core": "~7.6.0||~8.7.0||>=9.1.0 <9.3.0"
   },
   "replace": {
     "hwt_memorylist": "self.version",

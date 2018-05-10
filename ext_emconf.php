@@ -29,10 +29,10 @@ $EM_CONF[$_EXTKEY] = array(
     'modify_tables' => '',
     'clearCacheOnLoad' => 0,
     'lockType' => '',
-    'version' => '0.0.4',
+    'version' => '0.0.5',
     'constraints' => array(
         'depends' => array(
-            'typo3' => '7.6.0-8.7.99',
+            'typo3' => '7.6.0-9.2.99',
             'php' => '7.0.1-7.2.99',
         ),
         'conflicts' => array(

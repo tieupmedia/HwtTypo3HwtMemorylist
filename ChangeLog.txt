@@ -1,6 +1,12 @@
+2018-05-10 Heiko Westermann <hwt3@gmx.de>
+    * Version 0.0.5-beta - Bugfix, compatibility and maintenance release
+    * [BUGFIX/FEATURE] Include neccessary js for ajax by default. (Can be disabled by admin.)
+    * [BUGFIX] Disabled parameter check on ajax actions, to avoid cHash error.
+    * [FEATURE] Checked compatibility with TYPO3 9.2.x
+
 2018-05-09 Heiko Westermann <hwt3@gmx.de>
     * Version 0.0.4-beta - First public release
-    * [FEATURE] Configurable list types (models) and repositories
+    * [FEATURE] Examplary, adaptable control elements
     * [TASK] Optimised ajax handling
 
 2017-11-04 Heiko Westermann <hwt3@gmx.de>
@@ -16,3 +22,4 @@
     * Version 0.0.1-alpha
     * Initial setup: This is an early version of the extension in development.
       Some major functions and features are missing!
+    * [FEATURE] Memory list plugin
