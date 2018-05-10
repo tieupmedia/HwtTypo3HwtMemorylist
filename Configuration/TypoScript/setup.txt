@@ -38,7 +38,7 @@ plugin.tx_hwtmemorylist {
 
 
 #
-# ajax handling
+# ajax libs
 #
 
 # global js vars
@@ -65,10 +65,6 @@ lib.tx_hwtmemorylist_memorylist_globaljsvars {
     insertData = 1
 }
 
-page.jsInline {
-    121212 < lib.tx_hwtmemorylist_memorylist_globaljsvars
-    121212.stdWrap.wrap3 >
-}
 
 
 # ajax page object
@@ -109,21 +105,27 @@ tx_hwtmemorylist_memorylist_ajax {
 
 
 
-x_tx_hwtmemorylist_memorylist_ajaxHtml < hwtmemorylist_memorylist_ajax
-x_tx_hwtmemorylist_memorylist_ajaxHtml {
-    typeNum = 121213
-    config {
-        additionalHeaders {
-            20.header = Content-type:text/html
-        }
-    }
+#
+# js handling
+#
 
-    10 {
-        switchableControllerActions {
-            Memorylist {
-                2 >
-                3 >
-            }
-        }
-    }
+# add jQuery if it was turned on in the constants
+[globalVar = LIT:0 < {$plugin.tx_hwtmemorylist.settings.javascript.addJQueryFromGoogle}]
+page.includeJSFooterlibs.tx_hwtmemorylist_jquery = {$plugin.tx_hwtmemorylist.settings.javascript.jqueryUrl}
+page.includeJSFooterlibs.tx_hwtmemorylist_jquery.external = 1
+[end]
+
+
+# add custom js
+[globalVar = LIT:0 < {$plugin.tx_hwtmemorylist.settings.javascript.addJavaScript}]
+page.jsInline {
+    # place global js inline
+    121212 < lib.tx_hwtmemorylist_memorylist_globaljsvars
+    121212.stdWrap.wrap3 >
 }
+
+page.includeJSFooter {
+	# include js file for ajax handling
+    tx_hwtmemorylist_memorylist_ajax = EXT:hwt_memorylist/Resources/Public/JavaScript/Memorylist/Ajax.js
+}
+[end]

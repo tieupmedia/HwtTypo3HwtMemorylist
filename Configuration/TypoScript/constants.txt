@@ -9,6 +9,12 @@ plugin.tx_hwtmemorylist {
     }
 
     settings {
+        javascript {
+            jqueryUrl = https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+            addJQueryFromGoogle = 1
+            addJavaScript = 1
+        }
+
         ajax {
             typeNum = 121212
             pid = 1
