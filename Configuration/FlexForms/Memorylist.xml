@@ -23,6 +23,7 @@
                             <onChange>reload</onChange>
                             <config>
                                 <type>select</type>
+                                <renderType>selectSingle</renderType>
                                 <items>
                                     <numIndex index="0">
                                         <numIndex index="0">LLL:EXT:hwt_memorylist/Resources/Private/Language/locallang_be.xlf:flexform_setting.mode.memorylist_list</numIndex>
