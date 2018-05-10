@@ -97,6 +97,10 @@ tx_hwtmemorylist_memorylist_ajax {
                 4 = clear
             }
         }
+
+        # for TYPO3 >= 8.x
+        features.requireCHashArgumentForActionArguments = 0
+
         view < plugin.tx_hwtmemorylist.view
         persistence < plugin.tx_hwtmemorylist.persistence
         settings < plugin.tx_hwtmemorylist.settings
