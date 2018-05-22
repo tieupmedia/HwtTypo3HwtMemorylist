@@ -1,3 +1,12 @@
+2018-05-22 Heiko Westermann <hwt3@gmx.de>
+    * Version 0.0.6-beta - Feature, maintenance and compatibility release
+    * [FEATURE] Make template variants useable
+    * [FEATURE] Added manual to README.md
+    * [TASK] Refactored template paths settings to well known quasi-standard
+    * [TASK] Refactored 'recordType' key in TypoScript settings
+    * [TASK] Added 'renderType' to plugin mode select field in FlexForm.
+    * [TASK] Moved TCA modifications from ext_tables.php to override config files.
+
 2018-05-10 Heiko Westermann <hwt3@gmx.de>
     * Version 0.0.5-beta - Bugfix, compatibility and maintenance release
     * [BUGFIX/FEATURE] Include neccessary js for ajax by default. (Can be disabled by admin.)
