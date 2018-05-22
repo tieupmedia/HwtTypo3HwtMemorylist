@@ -11,25 +11,24 @@ plugin.tx_hwtmemorylist {
             pid = {$plugin.tx_hwtmemorylist.settings.ajax.pid}
         }
 
-        list {
-            recordtypes {
-                # stdClass
-                Page {
-                    repository = Hwt\HwtMemorylist\Domain\Repository\PageRepository
-                }
-
-                # Models
-                TxNewsNews {
-                    repository = GeorgRinger\News\Domain\Repository\NewsRepository
-                }
-                TxHwtAddressAddress {
-                    repository = Hwt\HwtAddress\Domain\Repository\AddressRepository
-                }
-            }
-        }
-
+        #list {}
         #add {}
         #remove {}
+
+        recordTypes {
+            # stdClass
+            Page {
+                repository = Hwt\HwtMemorylist\Domain\Repository\PageRepository
+            }
+
+            # Models
+            TxNewsNews {
+                repository = GeorgRinger\News\Domain\Repository\NewsRepository
+            }
+            TxHwtAddressAddress {
+                repository = Hwt\HwtAddress\Domain\Repository\AddressRepository
+            }
+        }
 
         enableDemoTemplates = {$plugin.tx_hwtmemorylist.settings.enableDemoTemplates}
     }

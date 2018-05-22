@@ -34,8 +34,8 @@ namespace Hwt\HwtMemorylist\Controller;
 class MemorylistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
     protected function _init() {
-        if ( !empty($this->settings['list']['recordtypes']) ) {
-            $this->recordtypes = $this->settings['list']['recordtypes'];
+        if ( !empty($this->settings['recordTypes']) ) {
+            $this->recordtypes = $this->settings['recordTypes'];
             //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings['ajax']['typeNum']);
         }
     }
