@@ -1,3 +1,4 @@
+// Define the variable global, to make it usable in custom integration
 var hwtmemorylistCtrlInit;
 
 jQuery(document).ready(function () {
