@@ -1,36 +1,12 @@
 <f:layout name="Memorylist/Default" />
 
-<f:section name="content">
-    <div class="hwtmemorylist-list">
-        <h3>List-Template</h3><br />
-        <p class="hwtmemmorylist-listinfo">
-            <f:translate key="plugin_memorylist.list.countofitems" default="%s items" arguments="{0: '{records -> f:count()}'}" />
-        </p>
-
-        <f:if condition="{records -> f:count()} > 0">
-            <f:then>
-                <ul class="hwtmemorylist-items">
-                    <f:for each="{records}" as="record">
-                        <li>
-                            <f:render partial="Memorylist/ListItem" arguments="{record: record}"/>
-                        </li>
-                    </f:for>
-                </ul>
-            </f:then>
-            <f:else>
-                <f:render partial="Memorylist/ListNoItems" />
-            </f:else>
-        </f:if>
-    </div>
-
-    <f:if condition="{ajax}">
+<f:section name="main">
+    <f:if condition="{settings.templateVariantList}">
+        <f:then>
+            <f:render partial="Memorylist/TemplateVariants/List/{settings.templateVariantList -> f:format.case(mode: 'capital')}" arguments="{_all}"/>
+        </f:then>
         <f:else>
-            <div class="hwtmemorylist-controls">
-                <button class="hwtmemorylist-ctrl" data-hwtmemorylist-action="clear"><f:translate key="plugin_memorylist.ctrl.clear" default="clear all" /></button>
-            </div>
-            <f:if condition="{settings.enableDemoTemplates}">
-                <f:render partial="Memorylist/ListDemoItemControls" />
-            </f:if>
+            <f:render partial="Memorylist/TemplateVariants/List/Default" arguments="{_all}"/>
         </f:else>
     </f:if>
 </f:section>
