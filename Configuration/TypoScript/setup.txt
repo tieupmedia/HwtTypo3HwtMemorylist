@@ -1,8 +1,17 @@
 plugin.tx_hwtmemorylist {
     view {
-        templateRootPaths.0 = {$plugin.tx_hwtmemorylist.view.templateRootPaths.0}
-        partialRootPaths.0 = {$plugin.tx_hwtmemorylist.view.partialRootPaths.0}
-        layoutRootPaths.0 = {$plugin.tx_hwtmemorylist.view.layoutRootPaths.0}
+        templateRootPaths {
+            0 = EXT:hwt_memorylist/Resources/Private/Templates/
+            1 = {$plugin.tx_hwtmemorylist.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:hwt_memorylist/Resources/Private/Partials/
+            1 = {$plugin.tx_hwtmemorylist.view.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:hwt_memorylist/Resources/Private/Layouts/
+            1 = {$plugin.tx_hwtmemorylist.view.layoutRootPath}
+        }
     }
 
     settings {
