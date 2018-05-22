@@ -63,5 +63,5 @@ plugin.tx_hwtmemorylist.settings {
 - \>= 0.0.4 for TYPO3 7.6 - 8.7
 
 ## Migrations:
-**0.0.4 to 0.0.5**
+**0.0.5 to 0.0.6**
 The TypoScript key `plugin.tx_hwtmemorylist.settings.list.recordtypes` moved to `plugin.tx_hwtmemorylist.settings.recordTypes`.
