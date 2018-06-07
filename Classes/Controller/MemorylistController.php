@@ -33,6 +33,9 @@ namespace Hwt\HwtMemorylist\Controller;
  */
 class MemorylistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
+    use CacheNoncacheableActionTrait;
+
+
     protected function _init() {
         if ( !empty($this->settings['recordTypes']) ) {
             $this->recordtypes = $this->settings['recordTypes'];
