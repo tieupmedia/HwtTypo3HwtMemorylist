@@ -1,4 +1,12 @@
 2019-11-30 Heiko Westermann <hwt3@gmx.de>
+    * Version 0.2.0-beta - Maintenance and compatibility release
+    * [UPDATE] Make extension available for TYPO3 10.x
+    * [UPDATE] Migrate TS condition syntax, to Symfony expression language, deprecation #86068, feature #85829
+    * [UPDATE] Migrate namespace of fluid abstract view helper, deprecation #87277
+    * [UPDATE] Removed deprecated keys in ext_emconf.php
+    * [UPDATE] Migrate TS file endings from .txt to .typoscript
+
+2019-11-30 Heiko Westermann <hwt3@gmx.de>
     * Version 0.0.7-beta - Maintenance and compatibility release
     * [TASK] Update/improve README.md
     * [TASK] Replace $_EXTKEY in ext_localconf.php to be future save (breaks in TYPO3 10.x)
@@ -6,7 +14,7 @@
     * [TASK] Code cleanup
     * [TASK] Make extension available up to <= 9.5.99
     * [UPDATE] Fix composer deprecation for package name alias / extension key
-    
+
 2018-05-22 Heiko Westermann <hwt3@gmx.de>
     * Version 0.0.6-beta - Feature, maintenance and compatibility release
     * [FEATURE] Make template variants useable

@@ -81,6 +81,7 @@ plugin.tx_hwtmemorylist.settings {
 ## Versions:
 - \>= 0.0.4 for TYPO3 7.6 - 8.7
 - \>= 0.0.5 for TYPO3 7.6 - 9.x
+- \>= 0.2.0 for TYPO3 9.5 - 10.x
 
 ## Migrations:
 **0.0.5 to 0.0.6**
