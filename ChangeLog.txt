@@ -1,3 +1,12 @@
+2019-11-30 Heiko Westermann <hwt3@gmx.de>
+    * Version 0.0.7-beta - Maintenance and compatibility release
+    * [TASK] Update/improve README.md
+    * [TASK] Replace $_EXTKEY in ext_localconf.php to be future save (breaks in TYPO3 10.x)
+    * [FEATURE] Declare compliance with php strict types
+    * [TASK] Code cleanup
+    * [TASK] Make extension available up to <= 9.5.99
+    * [UPDATE] Fix composer deprecation for package name alias / extension key
+    
 2018-05-22 Heiko Westermann <hwt3@gmx.de>
     * Version 0.0.6-beta - Feature, maintenance and compatibility release
     * [FEATURE] Make template variants useable
