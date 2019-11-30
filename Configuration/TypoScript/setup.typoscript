@@ -122,14 +122,14 @@ tx_hwtmemorylist_memorylist_ajax {
 #
 
 # add jQuery if it was turned on in the constants
-[globalVar = LIT:0 < {$plugin.tx_hwtmemorylist.settings.javascript.addJQueryFromGoogle}]
+[{$plugin.tx_hwtmemorylist.settings.javascript.addJQueryFromGoogle} == 1]
 page.includeJSFooterlibs.tx_hwtmemorylist_jquery = {$plugin.tx_hwtmemorylist.settings.javascript.jqueryUrl}
 page.includeJSFooterlibs.tx_hwtmemorylist_jquery.external = 1
 [end]
 
 
 # add custom js
-[globalVar = LIT:0 < {$plugin.tx_hwtmemorylist.settings.javascript.addJavaScript}]
+[{$plugin.tx_hwtmemorylist.settings.javascript.addJavaScript} == 1]
 page.jsInline {
     # place global js inline
     121212 < lib.tx_hwtmemorylist_memorylist_globaljsvars
