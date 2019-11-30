@@ -33,7 +33,7 @@ namespace Hwt\HwtMemorylist\ViewHelpers\Variable;
  * @author Heiko Westermann <hwt3@gmx.de>
  * @package hwt_memorylist
  */
-class GetTypeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class GetTypeViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper {
 
     use \TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
