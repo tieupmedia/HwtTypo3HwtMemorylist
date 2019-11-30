@@ -19,12 +19,6 @@ jQuery(document).ready(function () {
                     {'type': hwtmemorylistMemorylistAjaxPageType}
                 ),
                 success: function (result) {
-                    /*if ( (jQuery(this).data('hwtmemorylist-action')==='add') || (jQuery(this).data('hwtmemorylist-action')==='remove') ) {
-                        // handle data
-                    } else {*/
-                        //hwtMemorylistResultContainer.html(result);
-                    //}
-
                     //Handle server response here
                     result = jQuery.parseJSON(result);
                     // ToDo: For debugging only
@@ -48,6 +42,7 @@ jQuery(document).ready(function () {
             });
         },
         handleAjaxError: function (jqXHR, textStatus, errorThrow) {
+            // ToDo: Implement error handling
             //resultContainer.html('Ajax request - ' + textStatus + ': ' + errorThrow).fadeIn('fast');
             //alert('bypass');
         }
@@ -68,7 +63,6 @@ jQuery(document).ready(function () {
             'tx_hwtmemorylist_memorylist[model]': jQuery(this).data('hwtmemorylist-model'),
             'tx_hwtmemorylist_memorylist[id]': jQuery(this).data('hwtmemorylist-recordid')
         });
-        //console.log(jQuery(this).data('hwtmemorylist-ajax'));
 
         hwtmemorylistAjaxService.ajaxCall(jQuery(this).data('hwtmemorylist-ajax'), jQuery(this));
     }

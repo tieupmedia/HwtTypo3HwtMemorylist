@@ -8,6 +8,6 @@ $extensionKey = 'hwt_memorylist';
 
 
 /*
- * Default TypoScript
+ * Selectable default TypoScript
  */
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($extensionKey, 'Configuration/TypoScript', 'Flexible Memory List');
