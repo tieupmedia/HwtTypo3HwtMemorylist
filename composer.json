@@ -29,7 +29,6 @@
     "typo3/cms-core": "~7.6.0||~8.7.0||>=9.1.0 <9.3.0"
   },
   "replace": {
-    "hwt_memorylist": "self.version",
     "typo3-ter/hwt_memorylist": "self.version"
   },
   "autoload": {
@@ -41,5 +40,10 @@
   "license": "GPL-2.0-or-later",
   "support": {
     "issues": "https://github.com/tieupmedia/HwtTypo3HwtMemorylist/issues/"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "hwt_memorylist"
+    }
   }
 }
